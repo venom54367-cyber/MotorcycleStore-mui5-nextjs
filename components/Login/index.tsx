@@ -12,9 +12,6 @@ import { Visibility, VisibilityOff } from '@mui/icons-material';
 
 import UserApi from '../../services/User';
 
-
-
-
 const ariaLabel = { 'aria-label': 'description' };
 
 interface State {
@@ -58,16 +55,16 @@ const Login:NextPage = () => {
         if (validator.isEmail(data.email)==false) {
             
             if (data.email=='') {
-                setIsErr('Please enter email address.')
+                setIsErr('Vui lòng nhập địa chỉ email.')
             }
-            else setIsErr('Please enter a valid email address.')
+            else setIsErr('Vui lòng nhập địa chỉ email hợp lệ.')
             setIsEmail(false)
         }
         else if (data.password.length<6 || data.password.length>20) {
             if (data.password.length==0) {
-                setIsErr('Please enter password.')
+                setIsErr('Vui lòng nhập mật khẩu.')
             }
-            else setIsErr('The password must be between 6-20 characters long.')
+            else setIsErr('Mật khẩu phải từ 6-20 ký tự.')
             setIsPwd(false)
         }
         else {
@@ -129,10 +126,10 @@ const Login:NextPage = () => {
                             <Stack spacing={5}>
                                 <Stack>
                                     <Typography fontSize={32}>
-                                        Login
+                                        Đăng nhập
                                     </Typography>
                                     <Typography fontSize={18}>
-                                        New visitor? <Link href='/Register' color='text.primary'> Create your account</Link> here
+                                        Khách hàng mới? <Link href='/Register' color='text.primary'> Tạo tài khoản</Link> tại đây
                                     </Typography>
                                 </Stack>
                                 <FormControl error={isEmail ? false : true}>
@@ -154,11 +151,11 @@ const Login:NextPage = () => {
                                     sx={{fontSize:'24px'}}
                                     fullWidth={true}
                                     inputProps={ariaLabel}
-                                    placeholder='Password'
+                                    placeholder='Mật khẩu'
                                     endAdornment={
                                         <InputAdornment position="end">
                                             <IconButton
-                                                aria-label="toggle password visibility"
+                                                aria-label="hiển thị mật khẩu"
                                                 onClick={handleClickShowPassword}
                                                 onMouseDown={handleMouseDownPassword}
                                             >
@@ -168,7 +165,7 @@ const Login:NextPage = () => {
                                     }
                                     />
                                     <FormHelperText id="my-helper-text" sx={{textAlign:'right'}}>
-                                        Click <Link href='#' color='text.primary'> here </Link> in case you forget your password
+                                        Nhấn vào <Link href='#' color='text.primary'> đây </Link> nếu bạn quên mật khẩu
                                     </FormHelperText>
                                 </FormControl>
                                 <Stack alignItems='center'>
@@ -178,10 +175,15 @@ const Login:NextPage = () => {
                                             variant="h6"
                                             fontSize='20px'
                                         >
-                                            <b>Login</b>
+                                            <b>Đăng nhập</b>
                                         </Typography>
                                     </ButtonBox> 
                                 </Stack>
+                                
+                                {/* Chữ ký bản quyền mượn tạm form đăng nhập */}
+                                <Typography variant="caption" display="block" textAlign="center" mt={3} color="text.secondary">
+                                    Phát triển bởi <b>Đặng Nguyễn Phương Duy</b>
+                                </Typography>
                             </Stack>
                         </Container>
 
@@ -189,7 +191,6 @@ const Login:NextPage = () => {
                 </Box>
             </Box>
         </Container>
-        // </Box>
     )
 }
 
