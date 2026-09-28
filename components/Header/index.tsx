@@ -13,13 +13,13 @@ import { UserContext } from '../../context/userContext'
 
 
 const navItems = [ 
-    'Home',
-    ['Motorcycles'],
-    'Our Blog',
-    'Contact Us'
+    'Trang chủ',
+    ['Xe Mô tô'],
+    'Bài viết',
+    'Liên hệ'
 ]
 const dropdownMenu:any ={
-    'Motorcycles': [ 'Showroom', 'Services', 'Parts', 'Test Drive' ],
+    'Xe Mô tô': [ 'Showroom', 'Dịch vụ', 'Phụ tùng', 'Lái thử' ],
 }
 
 interface Props {
@@ -105,7 +105,7 @@ const Header:NextPage = () => {
                             variant="h6"
                             fontSize='26px'
                         >
-                            <b>two wheelers</b>
+                            <b>Moto Showroom</b>
                         </Typography>
                     </Stack>
                     <MenuBar direction='row'>
@@ -169,7 +169,7 @@ const Header:NextPage = () => {
                                 variant="h6"
                                 fontSize='20px'
                             >
-                                <b>Login</b>
+                                <b>Đăng nhập</b>
                             </Typography>
                         </ButtonBox> 
                         ||
