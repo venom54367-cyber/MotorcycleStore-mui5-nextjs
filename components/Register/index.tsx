@@ -10,9 +10,9 @@ import UserApi from '../../services/User';
 function Copyright(props: any) {
     return (
         <Typography variant="body2" color="text.secondary" align="center" {...props}>
-        {'Copyright © '}
-        <Link color="inherit" href="https://mui.com/">
-            Your Website
+        {'Bản quyền © '}
+        <Link color="inherit" href="/">
+            Moto Showroom - Đặng Nguyễn Phương Duy
         </Link>{' '}
         {new Date().getFullYear()}
         {'.'}
@@ -81,10 +81,10 @@ const Register:NextPage = () => {
                     >
                     <Stack color="primary.main">
                         <Typography fontSize={32}>
-                        Create an account
+                        Tạo tài khoản mới
                         </Typography>
                         <Typography fontSize={18}>
-                        Already have an account? <Link href='/Login' color='text.primary'> Login</Link> here
+                        Đã có tài khoản? <Link href='/Login' color='text.primary'> Đăng nhập</Link> tại đây
                         </Typography>
                     </Stack>
                     <Box component="form" onSubmit={handleSubmit} sx={{ mt: 3 }}>
@@ -97,7 +97,7 @@ const Register:NextPage = () => {
                             fullWidth
                             sx={{fontSize:'24px'}}
                             inputProps={ariaLabel}
-                            placeholder='Full Name'
+                            placeholder='Họ và Tên'
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -120,11 +120,11 @@ const Register:NextPage = () => {
                             sx={{fontSize:'24px'}}
                             fullWidth={true}
                             inputProps={ariaLabel}
-                            placeholder='Password'
+                            placeholder='Mật khẩu'
                             endAdornment={
                                 <InputAdornment position="end">
                                     <IconButton
-                                        aria-label="toggle password visibility"
+                                        aria-label="hiển thị mật khẩu"
                                         onClick={handleClickShowPassword}
                                         onMouseDown={handleMouseDownPassword}
                                     >
@@ -142,11 +142,11 @@ const Register:NextPage = () => {
                             sx={{fontSize:'24px'}}
                             fullWidth={true}
                             inputProps={ariaLabel}
-                            placeholder='Confirm Password'
+                            placeholder='Xác nhận Mật khẩu'
                             endAdornment={
                                 <InputAdornment position="end">
                                     <IconButton
-                                        aria-label="toggle password visibility"
+                                        aria-label="hiển thị mật khẩu"
                                         onClick={handleClickShowPassword}
                                         onMouseDown={handleMouseDownPassword}
                                     >
@@ -159,7 +159,7 @@ const Register:NextPage = () => {
                         <Grid item xs={12}>
                             <FormControlLabel
                             control={<Checkbox value="allowExtraEmails" color="primary" />}
-                            label="I agree to store’s Terms and Conditions"
+                            label="Tôi đồng ý với các Điều khoản và Điều kiện của cửa hàng"
                             />
                         </Grid>
                         </Grid>
@@ -169,13 +169,13 @@ const Register:NextPage = () => {
                         variant="contained"
                         sx={{ mt: 3, mb: 2 }}
                         >
-                        Register Account
+                        Đăng ký Tài khoản
                         </Button>
                         </Stack>
                         <Grid container justifyContent="flex-end">
                         <Grid item>
-                            <Link href="#" variant="body2">
-                            Already have an account? Sign in
+                            <Link href="/Login" variant="body2">
+                            Đã có tài khoản? Đăng nhập ngay
                             </Link>
                         </Grid>
                         </Grid>
